@@ -9,7 +9,7 @@ jobs:
     working_directory: ~/creepy-stories/web
     steps:
       - checkout
-      - run: npm run install
+      - run: npm install
       - run: npm run build
       - run: npm run release-notes-automation
 
