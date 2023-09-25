@@ -20,6 +20,6 @@ workflows:
     jobs:
       - release_notes_automation:
         filters:
-            branches:
-              only:
-                - production
+          branches:
+            only:
+              - production
