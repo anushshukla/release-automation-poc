@@ -26,10 +26,22 @@ jobs:
       - node/install-packages:
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: npm
-      - run:
-          name: Run release-notes-automation
-          command: npm run release-notes-automation
-          filters:
+
+  release-notes-automation:
+    docker:
+      - image: cimg/node:lts
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: .
+      - run: npm run release-notes-automation
+
+workflows:
+  workflow-production:
+    jobs:
+      - release-notes-automation:
+        filters:
             branches:
               only:
-                - production
+                - develop
+        
