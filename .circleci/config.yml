@@ -1,4 +1,4 @@
-version: 2.1
+version: 2.2.0
 orbs:
   node: circleci/node@5.1.0
 
@@ -22,4 +22,4 @@ workflows:
         filters:
           branches:
             only:
-              - production
+              - /production/
