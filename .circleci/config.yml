@@ -5,7 +5,7 @@ orbs:
 jobs:
   release_notes_automation:
     docker:
-      - image: circleci/node:lts
+      - image: circleci/node:18.18.0
     working_directory: ~/app
     steps:
       - checkout
