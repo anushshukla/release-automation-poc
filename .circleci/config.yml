@@ -19,6 +19,7 @@ workflows:
   wk_prod:
     jobs:
       - release_notes_automation:
-        branches:
-          only:
-            - production
+        filters:
+          branches:
+            only:
+              - production
