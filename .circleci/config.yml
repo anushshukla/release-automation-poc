@@ -5,10 +5,12 @@ orbs:
 jobs:
   release_notes_automation:
     docker:
-      - image: circleci/node:18.18.0
+      - image: cimg/node:18.18.0
     working_directory: ~/app
     steps:
       - checkout
+      - run: node --version
+      - run: npm --version
       - run: npm install
       - run: npm run build
       - run: npm run release-notes-automation
