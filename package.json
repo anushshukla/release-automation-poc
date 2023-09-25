@@ -21,7 +21,8 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "release-notes-automation": "ts-node-dev release-notes-automation.ts",
+    "release-notes-automation:dev": "ts-node-dev src/scripts/release-notes-automation.ts",
+    "release-notes-automation": "node build/scripts/release-notes-automation.js",
     "build": "tsc",
     "test": "jest"
   },
