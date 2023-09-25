@@ -1,12 +1,12 @@
 version: 2.1
 orbs:
-  node: circleci/node@4.7
+  node: circleci/node@5.1.0
 
 jobs:
   release_notes_automation:
     docker:
       - image: circleci/node:lts
-    working_directory: ~/creepy-stories/web
+    working_directory: ~/app
     steps:
       - checkout
       - run: npm install
