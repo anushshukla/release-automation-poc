@@ -16,10 +16,10 @@ jobs:
       - run: npm run release-notes-automation
 
 workflows:
-  wk_prod:
+  wk-prod:
     jobs:
       - release_notes_automation:
-        filters:
+          filters:
             branches:
               only:
                 - production

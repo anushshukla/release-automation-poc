@@ -66,7 +66,7 @@ function updateDatabase(version: string, releaseNote: string) {
   return DynamoDB.send(new PutItemCommand({
     TableName: "release-note-automation-poc",
     Item: {
-      APP: { S: 'frontend' },
+      APP: { S: `frontend#${Date.now()}` },
       version: { S: version },
       note: { S: releaseNote },
     },
